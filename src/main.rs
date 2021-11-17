@@ -1,12 +1,12 @@
-use clap::{AppSettings, Clap};
+use clap::{ColorChoice, Parser};
 mod process;
 
-#[derive(Clap)]
+#[derive(Parser)]
 #[clap(
     version = "1.0",
     author = "Shun Namiki aka Nash <snamiki1212@gmail.com>"
 )]
-#[clap(setting = AppSettings::ColoredHelp)]
+#[clap(color = ColorChoice::Always)]
 struct Opts {
     input: String,
 }
